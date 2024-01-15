@@ -23,7 +23,7 @@ struct ToDoListView: View {
                 .padding()
                 // List of tasks
                 List {
-                    ForEach(viewModel.applyFilter(at: filterIndex)) { item in
+                    ForEach(viewModel.filteredToDoList(at: filterIndex)) { item in
                         HStack {
                             Button(action: {
                                 viewModel.toggleTodoItemCompletion(item)
