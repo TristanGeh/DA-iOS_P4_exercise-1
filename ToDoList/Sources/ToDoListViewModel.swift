@@ -40,9 +40,8 @@ final class ToDoListViewModel: ObservableObject {
         toDoItems.removeAll { $0.id == item.id }
     }
 
-    /// Apply the filter to update the list.
+    /// Filters the ToDo List based on the specified index
     func filteredToDoList(at index: Int) -> [ToDoItem] {
-        // TODO: - Implement the logic for filtering
         switch index {
         case 0:
             return toDoItems
